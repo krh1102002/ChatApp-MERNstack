@@ -6,8 +6,8 @@ import Login from './Components/Login.js'
 const App = () => {
   return (
     <div className='App'>
-      {/* <MainContainer/> */}
-      <Login/>
+      <MainContainer/>
+      {/* <Login/> */}
     </div>
   );
 };
