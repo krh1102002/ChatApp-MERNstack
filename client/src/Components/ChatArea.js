@@ -1,10 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SendIcon from "@mui/icons-material/Send";
 import { IconButton } from "@mui/material";
 import MessagesSelf from "./MessagesSelf";
 import MessagesOthers from "./MessagesOthers";
 const ChatArea = ({ props }) => {
+  const [conversations,setConversations]=useState([
+    {
+        name:"Test#1",
+        lastMessage:"Last Message #1",
+        timeStamp:"Today"
+    },
+    {
+        name:"Test#2",
+        lastMessage:"Last Message #2",
+        timeStamp:"Today"
+    },
+    {
+        name:"Test#3",
+        lastMessage:"Last Message #3",
+        timeStamp:"Today"
+    },
+])
+var props=conversations[0];
   return (
     <div className="chatArea-container">
       <div className="ChatArea-header">
@@ -31,7 +49,7 @@ const ChatArea = ({ props }) => {
         <MessagesOthers />
         <MessagesSelf />
         <MessagesOthers />
-        <MessagesSelf />{" "}
+        <MessagesSelf />
       </div>
       <div className="text-input-area">
         <input placeholder="Type a message" className="search-box" />
